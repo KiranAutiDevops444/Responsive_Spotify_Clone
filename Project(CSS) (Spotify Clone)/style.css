@@ -1,0 +1,318 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin:0;               /*  to remove all default margins */
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;        /* only main-content section is scrollable other are not scrollable */
+}
+
+
+.main{
+    display: flex;            /* it makes page responsive */
+    height: 100vh;            /* it aquires 100% viewport height */
+    padding: 0.5rem;
+}
+
+
+.sidebar{
+    background-color: #000;
+    width: 340px;              /*width to the sidebar*/
+    border-radius:1rem;        /* 1 rem=16px (curved edges)*/
+    margin-right: 0.5rem;
+}
+
+.main-content{
+    background-color: #121212;
+    flex: 1;                /*  except sidebar remaining all width covered by main-content  */
+    border-radius: 1rem;    /* 1 rem=16px (curved edges)*/
+    overflow: auto;         /*Scrollbar is visible only when we Scrolled*/
+    padding:0 1.5rem 0 1.5rem;
+
+}
+
+.music-player{
+    background-color: black;
+    position: fixed;         /* position of music-player is fixed to bottom */
+    bottom:0;               /*margin from bottom is 0 */
+    width: 100%;            /*  music-player aquires all width */
+    height: 72px;
+}
+
+
+
+/* Sidebar */
+
+
+
+a{                          
+    text-decoration: none;    /*removes underline of all anker tags*/
+    color: #fff;
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;           /*horizontally align the nav*/
+    flex-direction: column;  /*reverse the direction of flex*/
+    justify-content: center; /*Justify content center is horizontally center the item but here we reverse the flex then it vertically center the item within the container*/
+    height: 100px;           /*height to the navbar*/
+    padding: 0.5rem 0.75rem;/*padding to the navbar*/
+}
+
+.nav-opt {
+    line-height: 2.5rem;     /*height to the nav-options*/
+    opacity:0.5;             /*starting opacity*/
+    padding: 0.75rem;
+}
+
+.nav-opt:hover {
+    
+    opacity:1;               /*opacity after hover*/
+}
+
+.nav-opt i{
+    font-size: 1.25rem;      /*size of icon home and search*/
+}
+
+.nav-opt a{
+    font-size: 1rem;         /*size of text home and search*/
+    margin-left: 1rem;       /*space between icon and text*/
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 1rem;         /* 1 rem=16px (curved edges)*/  
+    height: 100%;                /* boxes container covers 100% width*/
+    margin-top: 0.5rem;          /*margin to above library section*/
+    padding: 0.5rem 0.75rem;     
+}
+
+.options{
+    display:flex;            /*horizontally align the library*/
+    justify-content: space-between;   /*align items along the main axis*/
+    align-items: center;     
+}
+
+.lib-opt img{
+    height:1.25rem;
+    weight:1.25rem;
+}
+
+.icons {
+    font-size:1.25rem;
+    display: flex;
+}
+
+.icons i {
+    opacity:0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity:1;
+}
+
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2{
+    font-size: 0.85rem;
+    opacity:0.9;
+}
+
+.badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;           /*content is fitin under badge*/
+
+}
+
+.dark-badge{
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+/* .sticky-nav bar */
+
+
+
+
+.sticky-nav{
+    position: sticky;
+    top:0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;                        /*the clashes of header and text inside main section is fixed  one layer neche*/
+
+}
+
+.sticky-nav-icons{
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sticky-nav-options button{
+    margin-right: 1rem;
+}
+
+@media (max-width:1000px){
+    .hide{
+        display:none;                 /* to hide the icon when length is 1000px*/
+    }
+}
+
+
+
+
+/* main content for cards */
+
+
+
+
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius:0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img{
+    width: 100%;
+    border-radius:0.5rem;
+}
+
+.caed-title{
+    font-weight: 600;
+    
+        
+    
+}
+
+.card-info{
+    font-size: 0.85rem;
+    opacity:0.8;
+}
+
+.footer{
+    height: 300px;                             /* it addes footer into the main section*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;            /*footer line*/
+    opacity: 0.4;
+}
+
+
+
+
+/* music player  (center box)*/
+
+
+
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album{
+    width: 25%;
+}
+
+.player{
+    width: 50%;
+}
+
+.controls{
+    width: 25%;
+}
+
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+.playback-bar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width: 70%;
+    appearance: none;              /*appearance:none removes all by default styling of any element. This property has two values either none or auto*/
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{            /*refered from quicksmode.org Styling and scripting sliders*/
+    background-color: #ddd;                            /*there are two parts of range track and thumb*/
+    border-radius: 100px;                                 /*-webkit-slider-runnable-track is use to style track of the range*/
+    height: 0.2rem;                                       /*-webkit-slider-thumb is use to style thumb of the range*/
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+
+
+/* music player (Left box) */
+
+
